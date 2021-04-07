@@ -1,0 +1,37 @@
+
+query is__SELECT * FROM sales__by user__user1__at time__04/07/2021, 21:20:32
+query is__SELECT * FROM agent__by user__user1__at time__04/07/2021, 21:24:02
+query is__SELECT * FROM agent__by user__user1__at time__04/07/2021, 21:25:52
+query is__SELECT * FROM agent WHERE Contact = 74656__by user__user1__at time__04/07/2021, 21:26:28
+query is__INSERT INTO agent VALUES ('775','Yoru','A-',45655)__by user__user1__at time__04/07/2021, 21:27:10
+query is__UPDATE agent SET Grade = "A" WHERE Contact = 45655__by user__user1__at time__04/07/2021, 21:29:42
+query is__SELECT * FROM agent__by user__user1__at time__04/07/2021, 21:30:59
+query is__UPDATE agent SET Grade = "A-" WHERE Contact = 45655__by user__user1__at time__04/07/2021, 21:31:18
+query is__UPDATE agent SET Agent Name = 'Viper', Grade = 'A-' WHERE Contact = 22222__by user__user1__at time__04/07/2021, 21:32:12
+query is__SELECT * FROM agent__by user__user1__at time__04/07/2021, 21:34:16
+query is__INSERT INTO agent VALUES ('882','Sage','A+',45228)__by user__user1__at time__04/07/2021, 21:34:47
+query is__UPDATE agent SET Agent Name = 'Cypher', Grade = 'B-' WHERE Contact = 222222__by user__user1__at time__04/07/2021, 21:35:47
+query is__UPDATE agent SET Agent Name = 'Cypher', Grade = 'B-' WHERE Contact = 45655__by user__user1__at time__04/07/2021, 21:36:08
+query is__UPDATE agent SET ID = "777", Agent Name = "Falgun M", Grade = "A+" WHERE Contact = 74656__by user__user1__at time__04/07/2021, 21:37:17
+query is__DELETE FROM agent WHERE Contact = 66666__by user__user1__at time__04/07/2021, 21:37:47
+query is__DELETE FROM agent WHERE Contact = 45655__by user__user1__at time__04/07/2021, 21:37:57
+query is__SELECT Agent Name,Grade FROM agent WHERE Contact = 55555__by user__user1__at time__04/07/2021, 21:40:48
+query is__UPDATE agent SET Grade = "A+" WHERE Contact = 55555__by user__user1__at time__04/07/2021, 21:41:08
+query is__SELECT * FROM sales__by user__user1__at time__04/07/2021, 21:48:53
+query is__SELECT * FROM sales WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 21:49:31
+query is__SELECT Product Name,Price FROM sales WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 21:50:58
+query is__INSERT INTO sales VALUES ('S442','Mountain Shoes','899',89552145)__by user__user1__at time__04/07/2021, 21:52:08
+query is__UPDATE sales SET Price = "1599" WHERE PCode = 85255545__by user__user1__at time__04/07/2021, 21:53:16
+query is__UPDATE sales SET Product Name = 'Dark Green Tshirt', Price = '500' WHERE PCode = 78965225__by user__user1__at time__04/07/2021, 21:55:10
+query is__UPDATE sales SET ID = "H745", Product Name = "Marvel Hoodie", Price = "1200" WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 21:56:36
+query is__DELETE FROM sales WHERE PCode = 89552145__by user__user1__at time__04/07/2021, 21:57:45
+query is__SELECT Product Name,Price FROM sales WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 23:41:15
+query is__SELECT * FROM sales__by user__user1__at time__04/07/2021, 23:48:24
+query is__SELECT * FROM sales WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 23:48:30
+query is__SELECT Product Name,Price FROM sales WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 23:48:45
+query is__INSERT INTO sales VALUES ('S442','Mountain Shoes','899',89552145)__by user__user1__at time__04/07/2021, 23:48:57
+query is__UPDATE sales SET Price = "1999" WHERE PCode = 85255545__by user__user1__at time__04/07/2021, 23:49:17
+query is__UPDATE sales SET Product Name = 'Green Tshirt', Price = '399' WHERE PCode = 78965225__by user__user1__at time__04/07/2021, 23:49:50
+query is__UPDATE sales SET ID = "H455", Product Name = "Marvel Hoodie", Price = "1500" WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 23:50:16
+query is__DELETE FROM sales WHERE PCode = 89552145__by user__user1__at time__04/07/2021, 23:51:49
+query is__SELECT Agent Name,Grade FROM agent WHERE Contact = 55555__by user__user1__at time__04/07/2021, 23:52:20

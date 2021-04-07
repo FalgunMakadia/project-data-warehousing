@@ -1,0 +1,1 @@
+{"local": ["sales"], "remote": ["agent"], "sales": ["ID|varchar(10)", "Product Name|varchar(15)", "Price|int", "PCode|int"], "agent": ["ID|varchar(10)", "Agent Name|varchar(15)", "Grade|varchar(3)", "Contact|int"]}
