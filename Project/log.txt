@@ -35,3 +35,11 @@ query is__UPDATE sales SET Product Name = 'Green Tshirt', Price = '399' WHERE PC
 query is__UPDATE sales SET ID = "H455", Product Name = "Marvel Hoodie", Price = "1500" WHERE PCode = 45896325__by user__user1__at time__04/07/2021, 23:50:16
 query is__DELETE FROM sales WHERE PCode = 89552145__by user__user1__at time__04/07/2021, 23:51:49
 query is__SELECT Agent Name,Grade FROM agent WHERE Contact = 55555__by user__user1__at time__04/07/2021, 23:52:20
+query is__SELECT * FROM sales__by user__user1__at time__04/16/2021, 17:46:27
+query is__SELECT * FROM agent__by user__user1__at time__04/16/2021, 17:46:51
+query is__INSERT INTO sales VALUES ('G788','Friends Hoodie','599', 85256547)__by user__user1__at time__04/16/2021, 17:49:46
+query is__INSERT INTO sales VALUES ('G452','Band 4','2699', 41526985)__by user__user1__at time__04/16/2021, 17:55:12
+query is__select ID from sales__by user__user1__at time__04/19/2021, 16:49:50
+query is__select ID , Price from sales__by user__user1__at time__04/19/2021, 16:50:01
+query is__select ID , Price from sales__by user__user1__at time__04/19/2021, 16:50:13
+query is__select ID,Price from sales where PCode = 45896325__by user__user1__at time__04/19/2021, 16:52:15

@@ -1,3 +1,8 @@
+# This code might throw error when you try to run it because we will delete the VM instance to save credits 
+# as per professor's advice.
+# Without active VM instace, local queries still can be executed successfully, 
+# but for that you need to comment out code related to remote query processing.
+
 import pickle
 import re
 from datetime import datetime
@@ -14,6 +19,8 @@ from write_bucket import writeFileToBucket
 from prettytable import PrettyTable
 import json
 import os
+import paramiko
+
 
 class Login:
 
@@ -81,6 +88,36 @@ class Login:
                     bucket = getBucket()
                     list_from_file = readFileFromBucket(bucket, filename)
 
+
+                    f = open("query.txt", "a")
+                    f.write(query)
+                    f.close()
+
+                    # reference taken from
+                    # https://stackoverflow.com/questions/20499074/run-local-python-script-on-remote-server
+
+                    # Connect to remote host
+                    client = paramiko.SSHClient()
+                    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    client.connect('104.155.168.92', username='falgun', password='1999@falgun')
+
+                    # Setup sftp connection and transmit this script
+                    sftp = client.open_sftp()
+                    sftp.put(__file__, '/tmp/query.txt')
+                    sftp.close()
+
+                    # Run the transmitted script remotely without args and show its output.
+                    # SSHClient.exec_command() returns the tuple (stdin,stdout,stderr)
+                    list_from_file = client.exec_command('python /data/main.py')[1]
+                    
+                    saved = list_from_file
+
+                    client.exec_command('rm /tmp/query.txt')[1]
+                    
+                    client.close()
+
+                    os.remove("query.txt")
+
                 saved = list_from_file
 
                 isTablePresent = False
@@ -135,6 +172,34 @@ class Login:
                     bucket = getBucket()
                     list_from_file = readFileFromBucket(bucket, filename2)
 
+                    f = open("query.txt", "a")
+                    f.write(query)
+                    f.close()
+
+                    # reference taken from
+                    # https://stackoverflow.com/questions/20499074/run-local-python-script-on-remote-server
+
+                    # Connect to remote host
+                    client = paramiko.SSHClient()
+                    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    client.connect('104.155.168.92', username='falgun', password='1999@falgun')
+
+                    # Setup sftp connection and transmit this script
+                    sftp = client.open_sftp()
+                    sftp.put(__file__, '/tmp/query.txt')
+                    sftp.close()
+
+                    # Run the transmitted script remotely without args and show its output.
+                    # SSHClient.exec_command() returns the tuple (stdin,stdout,stderr)
+                    list_from_file = client.exec_command('python /data/main.py')[1]
+                    
+                    saved = list_from_file
+
+                    client.exec_command('rm /tmp/query.txt')[1]
+                    
+                    client.close()
+
+                    os.remove("query.txt")
 
                 saved = list_from_file
                 last = newvalues.pop()
@@ -202,6 +267,35 @@ class Login:
                     bucket = getBucket()
                     list_from_file = readFileFromBucket(bucket, filename3)
 
+                    f = open("query.txt", "a")
+                    f.write(query)
+                    f.close()
+
+                    # reference taken from
+                    # https://stackoverflow.com/questions/20499074/run-local-python-script-on-remote-server
+
+                    # Connect to remote host
+                    client = paramiko.SSHClient()
+                    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    client.connect('104.155.168.92', username='falgun', password='1999@falgun')
+
+                    # Setup sftp connection and transmit this script
+                    sftp = client.open_sftp()
+                    sftp.put(__file__, '/tmp/query.txt')
+                    sftp.close()
+
+                    # Run the transmitted script remotely without args and show its output.
+                    # SSHClient.exec_command() returns the tuple (stdin,stdout,stderr)
+                    list_from_file = client.exec_command('python /data/main.py')[1]
+                    
+                    saved = list_from_file
+
+                    client.exec_command('rm /tmp/query.txt')[1]
+                    
+                    client.close()
+
+                    os.remove("query.txt")
+
                 saved = list_from_file
 
                 isTablePresent = False
@@ -268,6 +362,35 @@ class Login:
                     tablelocation = "remote"
                     bucket = getBucket()
                     list_from_file = readFileFromBucket(bucket, filename4)
+
+                    f = open("query.txt", "a")
+                    f.write(query)
+                    f.close()
+
+                    # reference taken from
+                    # https://stackoverflow.com/questions/20499074/run-local-python-script-on-remote-server
+
+                    # Connect to remote host
+                    client = paramiko.SSHClient()
+                    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    client.connect('104.155.168.92', username='falgun', password='1999@falgun')
+
+                    # Setup sftp connection and transmit this script
+                    sftp = client.open_sftp()
+                    sftp.put(__file__, '/tmp/query.txt')
+                    sftp.close()
+
+                    # Run the transmitted script remotely without args and show its output.
+                    # SSHClient.exec_command() returns the tuple (stdin,stdout,stderr)
+                    list_from_file = client.exec_command('python /data/main.py')[1]
+                    
+                    saved = list_from_file
+
+                    client.exec_command('rm /tmp/query.txt')[1]
+                    
+                    client.close()
+
+                    os.remove("query.txt")
 
                 saved = list_from_file
                 isTablePresent = False
@@ -354,6 +477,35 @@ class Login:
                         data["remote"].append(tablename)
                         tablelocation = "remote"
 
+                    f = open("query.txt", "a")
+                    f.write(query)
+                    f.close()
+
+                    # reference taken from
+                    # https://stackoverflow.com/questions/20499074/run-local-python-script-on-remote-server
+
+                    # Connect to remote host
+                    client = paramiko.SSHClient()
+                    client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+                    client.connect('104.155.168.92', username='falgun', password='1999@falgun')
+
+                    # Setup sftp connection and transmit this script
+                    sftp = client.open_sftp()
+                    sftp.put(__file__, '/tmp/query.txt')
+                    sftp.close()
+
+                    # Run the transmitted script remotely without args and show its output.
+                    # SSHClient.exec_command() returns the tuple (stdin,stdout,stderr)
+                    list_from_file = client.exec_command('python /data/main.py')[1]
+                    
+                    saved = list_from_file
+
+                    client.exec_command('rm /tmp/query.txt')[1]
+                    
+                    client.close()
+
+                    os.remove("query.txt")
+
                 if tablelocation == "local":
                     f5 = open("data/" + filename5, 'wb')
                     pickle.dump(final_list, f5)
@@ -378,6 +530,7 @@ class Login:
 if __name__ == '__main__':
 
     isUserLoggedIn , userName = Login().login()
+    f = open("logFile.txt","a")
 
     if isUserLoggedIn:
         userInput = Login().takeInputFromUser()
